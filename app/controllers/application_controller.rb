@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :enhanced_cart
 
+  def show_orders(id)
+    orders ||= LineItem.where(order_id: id)
+  end
+  helper_method :show_orders
+
   def cart_subtotal_cents
     enhanced_cart.map {|entry| entry[:product].price_cents * entry[:quantity]}.sum
   end
