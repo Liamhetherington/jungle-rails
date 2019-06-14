@@ -22,9 +22,21 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+          <dt>Customer Ratings</dt>
+          <% @ratings.each do |rating| %>
+            <dd><li><%= rating.rating %> out of 5</li></dd>
+            <% end %>
+          <dt>Customer Reviews</dt>
+          <% @ratings.each do |rating| %>
+            <dd><li><%= rating.description %></li></dd>
+            <% end %>
+         
         </dl>
       </div>
+       
     </div>
+
+    
 
   </article>
 

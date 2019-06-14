@@ -134,7 +134,7 @@ cat3.products.create!({
 
 Rating.create(product_id: 4, user_id: 2, description: 'This thing sucks!', rating: 0)
 Rating.create(product_id: 1, user_id: 3, description: 'What a cool product!', rating: 4)
-Rating.create(product_id: 2, user_id: 5, description: 'Its perfect!', rating: 5)
+Rating.create(product_id: 1, user_id: 5, description: 'Its perfect!', rating: 5)
 Rating.create(product_id: 3, user_id: 1, description: 'Meh!', rating: 3)
 
 
