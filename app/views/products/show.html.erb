@@ -44,7 +44,9 @@
           <% @ratings.each do |rating| %>
             <dd><li><%= rating.description %></li></dd>
             <% if current_user.id == rating.user_id %>
-             <button> Delete </button>
+             <%= link_to 'Delete Review', 
+             product_rating_path(@product, rating), 
+             method: :delete, data: { confirm: 'Are you sure?'} %>
             <% end %>
             <% end %>
          

@@ -7,10 +7,12 @@ class RatingsController < ApplicationController
     redirect_to product_url(@product)
   end
   
-  # def destroy
-  #   rating[:]
-  #   redirect_to '/login'
-  # end 
+  def destroy
+    @product = Product.find params[:product_id]
+    @rating = Rating.find(params[:id])
+    @rating.destroy
+    redirect_to @product
+  end 
 
   def rating_params
     params.require(:rating).permit(
