@@ -23,31 +23,30 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
           
-          
-          <%= form_for :rating, url: product_ratings_path(@product) do |f| %>
-            <h3>Write a Review!</h3>
-        
-            <%= f.label :description %><br>
-            <%= f.text_area :description %><br>
-
-            <%= f.label :rating %><br>
-            <%= f.select :rating, [0, 1, 2, 3, 4, 5] %><br>
-        
-            <%= f.submit("Submit Review") %><br>
-          <% end %>
-          
           <dt>Customer Ratings</dt>
           <% @ratings.each do |rating| %>
             <dd><li><%= rating.rating %> out of 5</li></dd>
             <% end %>
           <dt>Customer Reviews</dt>
           <% @ratings.each do |rating| %>
-            <dd><li><%= rating.description %></li></dd>
+            <dd><li><%= rating.description %>
             <% if current_user.id == rating.user_id %>
              <%= link_to 'Delete Review', 
              product_rating_path(@product, rating), 
-             method: :delete, data: { confirm: 'Are you sure?'} %>
+             method: :delete, data: { confirm: 'Are you sure?'} %> </li></dd>
             <% end %>
+            <% end %>
+
+            <%= form_for :rating, url: product_ratings_path(@product) do |f| %>
+              <h3>Write a Review!</h3>
+          
+              <%= f.label :description %><br>
+              <%= f.text_area :description %><br>
+  
+              <%= f.label :rating %><br>
+              <%= f.select :rating, [0, 1, 2, 3, 4, 5] %><br>
+          
+              <%= f.submit("Submit Review") %><br>
             <% end %>
          
         </dl>

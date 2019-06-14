@@ -67,6 +67,17 @@ main section.categories-show {
     }
 }
 
+form {
+    float: right;
+    background-color: #999;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    margin-top: 5px;
+}
+
 main section.products-show {
     .product-detail {
         img.main-img {
