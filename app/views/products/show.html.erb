@@ -43,6 +43,9 @@
           <dt>Customer Reviews</dt>
           <% @ratings.each do |rating| %>
             <dd><li><%= rating.description %></li></dd>
+            <% if current_user.id == rating.user_id %>
+             <button> Delete </button>
+            <% end %>
             <% end %>
          
         </dl>
