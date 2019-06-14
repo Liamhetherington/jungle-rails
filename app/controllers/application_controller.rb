@@ -8,8 +8,9 @@ class ApplicationController < ActionController::Base
   end 
   helper_method :current_user
 
-  private
 
+  private
+  
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
   end
