@@ -33,6 +33,10 @@ main section.categories-show {
                 width: 100%;
                 opacity: 0.3;
                 transition: all 0.3s;
+                a.btn.btn-default.pull-right {
+                    margin-right: 40px;
+                    margin-top: 25px;
+                }
             }
             aside.sold-out {
                 position: absolute;
@@ -68,7 +72,7 @@ main section.categories-show {
 }
 
 form {
-    float: right;
+    float: left;
     background-color: #999;
     padding: 20px;
     border-radius: 10px;
@@ -76,6 +80,22 @@ form {
 
 input {
     margin-top: 5px;
+    border-radius: 5px;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+a {
+    margin-top: 40px;
+}
+
+.create-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 main section.products-show {
@@ -84,4 +104,14 @@ main section.products-show {
             max-width: 100%;
         }
     }
+}
+
+h1 {
+    display: felx;
+    justify-content: center;
+}
+
+div.create-form {
+    display: flex;
+    justify-content: center;
 }

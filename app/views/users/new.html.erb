@@ -1,5 +1,7 @@
 <h1>Create User</h1>
 
-<%= render 'form' %>
+<div class='create-container'>
+  <div class='create_form'><%= render 'form' %></div>
+  <div class='back_button'><%= link_to 'Back', users_path %></div>
+</div>
 
-<%= link_to 'Back', users_path %>
